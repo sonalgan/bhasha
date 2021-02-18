@@ -3,3 +3,4 @@ tensorflow==2.4.1
 pandas==1.2.2
 matplotlib==3.3.4
 Flask==1.1.2
+keras==2.4.3
