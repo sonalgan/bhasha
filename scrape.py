@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
 import os
-from re import sub
-import wget
+import re
+import string
+#import wget
 values='ABCDEFabcdef0123456789*'
 val_to_int = dict((c, i) for i, c in enumerate(values))
 maxlen=32
@@ -24,7 +25,7 @@ def tokenize_indic(text):
     
     # do not tokenize numbers and dates
     new_s=''
-   tokenize_indic(input_data) prev=0
+    prev=0
     for m in pat_num_seq.finditer(s):
         start=m.start()
         end=m.end()
@@ -69,7 +70,7 @@ def generate_iscii_map():
 
 def process(data):
   iscii_encoded=[]
-  data= sub(r"\d+","",data)
+  data=re.sub(r"\d+","",data)
   data=re.sub(r"[a-zA-Z]+","",data)
   #print(data)
   for ch in data:
@@ -93,7 +94,7 @@ def encode_labels(label):
 def main():
     
     
-    
+    '''
     X=list()
     Y=list()
     root=os.getcwd()
@@ -120,6 +121,7 @@ def main():
     del dc
     df=df.to_csv(os.path.join(root,'langdataset.csv'))
     return
+    '''
 
 if __name__ == "__main__":
     main()
