@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{%block content%}
+
+<div style="position:relative; top:50%; left: 40%;" >
+    <table >
+        <tr>
+            <th colspan=2>
+                Language Percent Distribution
+            </th>
+
+        </tr> 
+    {% for row in result %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}%</td>
+        </tr>
+    {% endfor %}
+    </table>
+   </div>
+{%endblock%}
