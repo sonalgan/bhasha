@@ -15,16 +15,16 @@
 <body>
  <img src="LOGO.gif"  style="width:200px;height:200px;" /> >
  <div class="login">
-	<h1>Bhaashaa</h1>
+   <img src="LOGO.gif"  style="width:200px;height:200px;"  />
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="input_data" placeholder="Enter your indic sentence here..." required="required" />
-      
+      <textarea rows="4" cols="50" name="input_data" required='required'>Enter your indic sentence here...</textarea>
+    	<!--input type="text" name="input_data" placeholder="Enter your indic sentence here..." required="required" /-->
+
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-
    <br>
    <br>
    
