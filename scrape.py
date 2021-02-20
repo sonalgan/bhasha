@@ -54,13 +54,24 @@ def one_hot_encoded(data):
     one_hot_encoded.append(letter)
   return np.array(one_hot_encoded)
 
+def one_hot_encode(data):
+    one_hot_encoded=[]
+    for x in data:
+        temp = np.zeros(106)
+        temp[x] = 1
+        one_hot_encoded.append(temp)
+    while(len(one_hot_encoded)<maxlen):
+        temp = np.zeros(106)
+        one_hot_encoded.append(temp)
+    return np.array(one_hot_encoded)
 def generate_iscii_map():
   df=pd.read_csv('https://raw.githubusercontent.com/sonalgan/DeepLearning/master/iscii1.csv')
   lang_map=[]
   ls=dict()
   for lang in languages:
     ls=dict()
-    for i,j in zip(df.iscii,df[lang]):
+    
+    for i,j in zip(df.index,df[lang]):
       if(j!=j):
         continue
       ls[j]=i
@@ -70,8 +81,7 @@ def generate_iscii_map():
 
 def process(data):
   iscii_encoded=[]
-  data=re.sub(r"\d+","",data)
-  data=re.sub(r"[a-zA-Z]+","",data)
+  data= re.sub(r"\d+","",data)
   #print(data)
   for ch in data:
     #print(ch)
@@ -79,11 +89,10 @@ def process(data):
       y=list(x.keys())
       #print(y)
       if(ch in y):
-          iscii_encoded.append(x[ch].capitalize())
+          iscii_encoded.append(x[ch])
           break
-  return iscii_encoded
 
-lang_map=generate_iscii_map()
+  return iscii_encoded
 
 def encode_labels(label):
     temp = np.zeros(N_LANG)
