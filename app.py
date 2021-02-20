@@ -36,7 +36,7 @@ def predict():
     input_data=input_data.translate(translate_table)
     lensent=len(tokenize_indic(input_data))
     for x in tokenize_indic(input_data):
-      x=one_hot_encode(process(x))
+      x=one_hot_encoded(process(x))
       x=np.reshape(x,(1,x.shape[0],x.shape[1]))
       pred = model.predict(x)
       for i in range(len(pred[0])):
