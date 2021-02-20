@@ -71,7 +71,7 @@ def generate_iscii_map():
   for lang in languages:
     ls=dict()
     
-    for i,j in zip(df.index,df[lang]):
+    for i,j in zip(df[iscii],df[lang]):
       if(j!=j):
         continue
       ls[j]=i
