@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.models import model_from_json
-from scrape import tokenize_indic,one_hot_encode,process
+from scrape import tokenize_indic,one_hot_encoded,process
 import numpy
 import os,string
 
