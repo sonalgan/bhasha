@@ -11,6 +11,7 @@ N_LANG=10
 languages=["hi","bn","gu","kn","mr","or","ta","te","ml","pa"]
 languages.sort()
 global lang_map
+
 ls=string.punctuation + '−।\u25AA\u0964'
 global translate_table
 translate_table=dict((ord(char),"") for char in ls)
@@ -78,7 +79,7 @@ def generate_iscii_map():
     lang_map.append(ls)
   return np.array(lang_map)
 
-
+lang_map=generate_iscii_map()
 def process(data):
   iscii_encoded=[]
   data= re.sub(r"\d+","",data)
