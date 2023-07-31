@@ -34,8 +34,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
-          # Specify the directory containing your static content (index.html)
-          publish_dir: './static'
+          # Specify the static site generator (e.g., "jekyll", "hugo", "gatsby", etc.)
+          static_site_generator: "static"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
