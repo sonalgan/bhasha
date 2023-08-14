@@ -1,6 +1,17 @@
-FROM python:3.7        ##Create base image
+# Use the official Python image as the base image
+FROM python:3.7
+
+# Copy the current directory into the container at /app
 COPY . /app
+
+# Set the working directory to /app
 WORKDIR /app
-RUN  pip3 install -r requirements.txt
+
+# Install any needed dependencies specified in requirements.txt
+RUN apt-get update && apt-get install --update -y python && pip install -r requirements.txt
+
+# Expose the port that the app runs on
 EXPOSE $PORT
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
+
+# Define the command to run your app using Gunicorn
+CMD ["gunicorn", "--workers=4", "--bind", "0.0.0.0:$PORT", "app:app"]
