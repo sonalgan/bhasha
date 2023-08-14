@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.8
+FROM python:3.8-slim
 
 # Copy the current directory into the container at /app
 COPY . /app
@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Install any needed dependencies specified in requirements.txt
-RUN apt-get update && apt-get install -y python && pip install -r requirements.txt
+RUN apt-get update && apt-get install --update -y python==3.8 && pip install -r requirements.txt
 
 # Expose the port that the app runs on
 EXPOSE $PORT
