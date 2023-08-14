@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Install any needed dependencies specified in requirements.txt
-RUN apt-get update && apt-get install --update -y python==3.8 && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Expose the port that the app runs on
 EXPOSE $PORT
