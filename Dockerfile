@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM heroku/heroku:20
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
