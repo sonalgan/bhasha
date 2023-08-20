@@ -1,0 +1,42 @@
+# Ignore development and system files
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.swp
+.DS_Store
+
+# Ignore virtual environment
+venv/
+env/
+*.env
+
+# Ignore Jupyter Notebook checkpoints and output
+.nbconvert/
+*.nbformat
+
+# Ignore local configuration
+config.py
+config.json
+
+# Ignore sensitive or confidential information (adjust patterns based on your needs)
+secrets.yaml
+api_keys.json
+
+# Ignore logs
+*.log
+
+# Ignore build and deployment artifacts
+build/
+dist/
+*.egg-info/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore data and model weights (adjust patterns based on your needs)
+data/
+models/
+*.h5
+*.pth
