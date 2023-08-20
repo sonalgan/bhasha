@@ -3,6 +3,6 @@ numpy==1.19.5
 tensorflow==2.5.1
 pandas==1.1.5
 matplotlib==3.3.4
-Flask==1.1.2
-keras>=2.4.0
+Flask>=2.1.0
+#keras>=2.4.0
 gunicorn

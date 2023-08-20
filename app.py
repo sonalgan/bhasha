@@ -1,11 +1,15 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.models import model_from_json
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import model_from_json
 from scrape import tokenize_indic,one_hot_encoded,process
 import numpy
 import os,string
+
+
+# Build and train your neural network using the Keras API within TensorFlow
+
 
 finallang=['Bengali','Gujarati','Hindi','Kannada','Malyalam','Marathi','Oriya','Punjabi','Tamil','Telugu']
 N_LANG=len(finallang)
