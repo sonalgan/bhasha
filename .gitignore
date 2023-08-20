@@ -19,3 +19,5 @@ secrets.txt
 
 # Ignore temporary files
 *.tmp
+
+*.h5
