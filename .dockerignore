@@ -26,7 +26,18 @@ api_keys.json
 # Ignore logs
 *.log
 
-# Ignore build and deployment artifacts
+# Ignore data and model weights (adjust patterns based on your needs)
+data/
+models/
+*.h5
+*.pth
+model.json
+
+# Ignore Docker-specific files
+.dockerignore
+Dockerfile
+
+# Ignore build artifacts
 build/
 dist/
 *.egg-info/
@@ -34,10 +45,3 @@ dist/
 *.pyo
 *.pyd
 __pycache__/
-
-# Ignore data and model weights (adjust patterns based on your needs)
-*.h5
-*.pth
-model.json
-
-static/*.gif
