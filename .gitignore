@@ -21,3 +21,4 @@ secrets.txt
 *.tmp
 
 *.h5
+model.json

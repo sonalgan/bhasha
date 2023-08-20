@@ -38,3 +38,4 @@ __pycache__/
 # Ignore data and model weights (adjust patterns based on your needs)
 *.h5
 *.pth
+model.json
