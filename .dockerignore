@@ -29,7 +29,7 @@ api_keys.json
 # Ignore data and model weights (adjust patterns based on your needs)
 data/
 models/
-*.h5
+
 *.pth
 
 
