@@ -1,6 +1,6 @@
 pip>=19.0.0
 numpy==1.19.5
-tensorflow==2.5.1
+tensorflow==2.11.1
 pandas==1.1.5
 matplotlib==3.3.4
 Flask>=2.1.0
