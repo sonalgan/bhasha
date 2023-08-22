@@ -20,6 +20,7 @@ secrets.txt
 # Ignore temporary files
 *.tmp
 
-
+__pycache__
+.venv/
 
 
