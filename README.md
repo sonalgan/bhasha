@@ -1,6 +1,8 @@
-# Bhasha Web App: Indic Languages Detection from Text
+<p align="center">
+  <img src="static/LOGO.gif" alt="Logo" width="30%">
+</p>
 
-![Logo]("static/LOGO.gif")
+# Bhasha Web App: Indic Languages Detection from Text
 
 Bhasha Web App is a deep learning-based web application designed to detect multiple Indian languages from a given text. The model achieves an accuracy rate of over 80% in predicting the language of the provided input text. The training and testing data for the model were sourced from the MultiIndicMT dataset, which encompasses 10 major Indic languages: Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Oriya, Punjabi, Tamil, Telugu, along with English.
 
@@ -26,24 +28,27 @@ The Bhasha Web App is hosted on the Heroku platform using Dockerized containers.
 
 **Fig. 1:** Encoding of diverse multilingual characters to ISCII encoding format for uniform representation.
 
-![ISCII Encoding]("static/iscii.png")
+<p align="center">
+  <img src="static/iscii.png" alt="ISCII Encoding" width="50%">
+</p>
 
 **Fig. 2:** Initial model accuracy and loss, followed by the implementation of various regularization techniques.
 
-![Model Accuracy and Loss]("static/metrics.jpg") 
+<p align="center">
+  <img src="static/metrics.jpg" alt="Model Accuracy and Loss" width="60%">
+</p>
 
 **Fig. 3 and 4:** Demonstration of the web app's functionality: inputting unknown mixed Indic language text and receiving the percentage distribution of languages.
 
-<div style="display: flex;">
+<div style="display: flex; justify-content: center;">
   <img src="static/input.png" alt="Input" width="45%">
   <img src="static/output.png" alt="Output" width="45%">
 </div>
 
-
 ## Contributors
 
-- [Your Name](https://github.com/sonalgan)
-
+- [Sonal Ganvir](https://github.com/sonalgan)
+- [Anurag De](https://github.com/404S-retr0)
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
